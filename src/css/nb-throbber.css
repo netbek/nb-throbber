@@ -1,0 +1,95 @@
+/**
+ * AngularJS throbber directive
+ *
+ * @author Hein Bekker <hein@netbek.co.za>
+ * @copyright (c) 2015 Hein Bekker
+ * @license http://www.gnu.org/licenses/agpl-3.0.txt AGPLv3
+ */
+
+.throbber {
+	display: none;
+	z-index: 1000;
+	font-size: 1em;
+	line-height: 1em;
+	width: 1em;
+	height: 1em;
+	color: #000;
+	fill: #000;
+	border: 0 solid transparent;
+}
+
+.cssanimations .throbber {
+	display: block;
+	border-width: 0.15em;
+	border-bottom-color: #EEE;
+	border-left-color: #EEE;
+	border-right-color: #000;
+	border-top-color: #000;
+	border-radius: 100%;
+	-webkit-animation: throbber-spin .6s infinite linear;
+	-moz-animation: throbber-spin .6s infinite linear;
+	-ms-animation: throbber-spin .6s infinite linear;
+	-o-animation: throbber-spin .6s infinite linear;
+	animation: throbber-spin .6s infinite linear;
+}
+
+@keyframes "throbber-spin" {
+	from {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+		-moz-transform: rotate(359deg);
+		-o-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-moz-keyframes throbber-spin {
+	from {
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes "throbber-spin" {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-ms-keyframes "throbber-spin" {
+	from {
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-o-keyframes "throbber-spin" {
+	from {
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
