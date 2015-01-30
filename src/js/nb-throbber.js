@@ -14,6 +14,8 @@
 		.directive('nbThrobber', nbThrobberDirective);
 
 	function nbThrobberDirective () {
-
+		return {
+			restrict: 'AE'
+		};
 	}
 })(window, window.angular);

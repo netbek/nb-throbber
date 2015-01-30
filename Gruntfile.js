@@ -39,16 +39,7 @@ module.exports = function (grunt) {
 				dest: 'dist/css/<%= pkg.name %>.css'
 			},
 			distJs: {
-				src: [
-					'src/js/nb-carousel.module.js',
-					'src/js/nb-carousel.animation.js',
-					'src/js/nb-carousel.controller.js',
-					'src/js/nb-carousel.directive.js',
-					'src/js/nb-carousel-config.service.js',
-					'src/js/nb-carousel-slide.directive.js',
-					'src/js/nb-carousel-slide-picture.directive.js',
-					'build/js/<%= pkg.name %>-templates.js'
-				],
+				src: ['src/js/**/*.js', '!src/js/<%= pkg.name %>-templates.js', 'build/js/<%= pkg.name %>-templates.js'],
 				dest: 'dist/js/<%= pkg.name %>.js'
 			}
 		},
