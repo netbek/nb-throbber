@@ -15,7 +15,10 @@
 
 	function nbThrobberDirective () {
 		return {
-			restrict: 'AE'
+			restrict: 'AE',
+			replace: true,
+			transclude: true,
+			template: '<div class="throbber"></div>'
 		};
 	}
 })(window, window.angular);
